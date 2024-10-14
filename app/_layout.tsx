@@ -4,14 +4,12 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { Slot } from 'expo-router';
-import { createTamagui, TamaguiProvider } from 'tamagui';
-import defaultConfig from '@tamagui/config/v3';
+import { TamaguiProvider } from 'tamagui';
+import appConfig from '../tamagui.config';
 import '@/assets/css/global.css';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
-
-const config = createTamagui(defaultConfig);
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -29,7 +27,7 @@ export default function RootLayout() {
   }
 
   return (
-    <TamaguiProvider config={config}>
+    <TamaguiProvider config={appConfig}>
       <View style={styles.app}>
         <Slot />
       </View>
