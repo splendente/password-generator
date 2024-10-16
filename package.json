@@ -27,6 +27,7 @@
     "@react-navigation/native": "^6.0.2",
     "@tamagui/config": "^1.115.0",
     "@tamagui/lucide-icons": "^1.115.0",
+    "@tamagui/switch": "^1.115.4",
     "expo": "~51.0.28",
     "expo-clipboard": "~6.0.3",
     "expo-constants": "~16.0.2",
