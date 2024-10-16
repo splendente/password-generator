@@ -1,4 +1,4 @@
-import { Switch } from '@tamagui/switch';
+import { Switch } from 'tamagui';
 
 type Props = {
   onCheckedChange: () => void;
