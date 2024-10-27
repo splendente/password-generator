@@ -1,4 +1,4 @@
-import { StyleSheet, useColorScheme } from 'react-native';
+import { useColorScheme } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { createContext, useEffect, useState } from 'react';
@@ -42,7 +42,9 @@ export default function RootLayout() {
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <Theme name={theme}>
           <Stack
-            style={styles.app}
+            flex={1}
+            alignItems="center"
+            justifyContent="center"
             theme="blue"
             backgroundColor={theme === 'dark' ? '#2a425e' : '#fff'}
           >
@@ -53,11 +55,3 @@ export default function RootLayout() {
     </TamaguiProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  app: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

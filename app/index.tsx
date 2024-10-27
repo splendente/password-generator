@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect, useContext } from 'react';
-import { View, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Stack } from 'tamagui';
 
 import { ThemeContext } from './_layout';
 
@@ -52,7 +52,7 @@ const Index = () => {
 
   return (
     <SafeAreaView>
-      <View style={styles.wrapper}>
+      <Stack gap={16}>
         <ToggleSwitch onCheckedChange={toggleTheme} />
         <PasswordField size="$4" value={password} />
         <CheckboxWithLabel
@@ -85,15 +85,9 @@ const Index = () => {
         />
         <LengthField length={length} setLength={setLength} />
         <SubmitButton onPress={onPress} text="パスワードを生成する" />
-      </View>
+      </Stack>
     </SafeAreaView>
   );
 };
 
 export default Index;
-
-const styles = StyleSheet.create({
-  wrapper: {
-    gap: 16,
-  },
-});
