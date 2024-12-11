@@ -1,6 +1,6 @@
 import { expect, test, describe } from '@jest/globals';
 import { renderHook } from '@testing-library/react';
-import { useGeneratePassword } from './useGeneratePassword';
+import { useGeneratePassword } from '@/hooks/useGeneratePassword';
 
 describe('useGeneratePassword', () => {
   const { result } = renderHook(() => useGeneratePassword());
