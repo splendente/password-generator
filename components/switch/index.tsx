@@ -5,6 +5,10 @@ type Props = {
 };
 
 export const ToggleSwitch = ({ onCheckedChange }: Props) => {
+  /**
+   * Function to handle the switch change
+   * @param {boolean} checked - The state of the switch
+   */
   const handleChange = (checked: boolean) => {
     const theme = checked ? 'dark' : 'light';
     onCheckedChange(() => theme);

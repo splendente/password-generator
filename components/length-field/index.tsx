@@ -7,6 +7,10 @@ type Props = {
 };
 
 export const LengthField = ({ length, setLength }: Props) => {
+  /**
+   * Function to handle the text change
+   * @param event - The event object
+   */
   const onChangeText = (event: React.ChangeEvent<HTMLInputElement>) => {
     const parsedValue = Number.parseInt(event, 10);
     if (Number.isNaN(parsedValue)) return;
