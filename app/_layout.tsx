@@ -2,7 +2,6 @@ import { useColorScheme } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { createContext, useEffect, useState } from 'react';
-import 'react-native-reanimated';
 import { Slot } from 'expo-router';
 import { TamaguiProvider } from 'tamagui';
 import appConfig from '../tamagui.config';
