@@ -14,8 +14,6 @@ import { ToggleSwitch } from '@/components/switch';
 
 import { useGeneratePassword } from '@/hooks/useGeneratePassword';
 
-const storybookEnabled = process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === 'true';
-
 const Index = () => {
   const [length, setLength] = useState(12);
   const [lowercase, setLowercase] = useState(true);
@@ -39,17 +37,6 @@ const Index = () => {
     // Call the updatePassword function with the current state
     updatePassword(length, lowercase, uppercase, number, symbol);
   }, []);
-
-  // If the storybookEnabled flag is set to true, render the Storybook UI
-  // if (storybookEnabled) {
-  //   const StorybookUI = require('../.storybook').default;
-
-  //   return (
-  //     <View style={{ flex: 1 }}>
-  //       <StorybookUI />
-  //     </View>
-  //   );
-  // }
 
   return (
     <SafeAreaView>

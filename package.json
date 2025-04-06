@@ -12,8 +12,6 @@
     "test": "jest",
     "lint": "expo lint",
     "prettier": "prettier --write .",
-    "storybook-generate": "sb-rn-get-stories",
-    "storybook-watch": "sb-rn-watcher",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -56,9 +54,6 @@
     "@react-native-async-storage/async-storage": "^2.0.0",
     "@react-native-community/datetimepicker": "^8.2.0",
     "@react-native-community/slider": "^4.5.3",
-    "@storybook/addon-ondevice-actions": "^8.3.6",
-    "@storybook/addon-ondevice-controls": "^8.3.6",
-    "@storybook/react-native": "^8.3.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.12",
