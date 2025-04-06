@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useContext } from 'react';
+import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack } from 'tamagui';
 
@@ -52,40 +53,42 @@ const Index = () => {
 
   return (
     <SafeAreaView>
-      <Stack gap={16}>
-        <ToggleSwitch onCheckedChange={toggleTheme} />
-        <PasswordField size="$4" value={password} />
-        <CheckboxWithLabel
-          id="lowercase"
-          label="英小文字"
-          size="$6"
-          checked={lowercase}
-          onCheckedChange={setLowercase}
-        />
-        <CheckboxWithLabel
-          id="uppercase"
-          label="英大文字"
-          size="$6"
-          checked={uppercase}
-          onCheckedChange={setUppercase}
-        />
-        <CheckboxWithLabel
-          id="number"
-          label="数値"
-          size="$6"
-          checked={number}
-          onCheckedChange={setNumber}
-        />
-        <CheckboxWithLabel
-          id="symbol"
-          label="記号"
-          size="$6"
-          checked={symbol}
-          onCheckedChange={setSymbol}
-        />
-        <LengthField length={length} setLength={setLength} />
-        <SubmitButton onPress={onPress} text="パスワードを生成する" />
-      </Stack>
+      <ScrollView keyboardDismissMode="on-drag">
+        <Stack gap={16}>
+          <ToggleSwitch onCheckedChange={toggleTheme} />
+          <PasswordField size="$4" value={password} />
+          <CheckboxWithLabel
+            id="lowercase"
+            label="英小文字"
+            size="$6"
+            checked={lowercase}
+            onCheckedChange={setLowercase}
+          />
+          <CheckboxWithLabel
+            id="uppercase"
+            label="英大文字"
+            size="$6"
+            checked={uppercase}
+            onCheckedChange={setUppercase}
+          />
+          <CheckboxWithLabel
+            id="number"
+            label="数値"
+            size="$6"
+            checked={number}
+            onCheckedChange={setNumber}
+          />
+          <CheckboxWithLabel
+            id="symbol"
+            label="記号"
+            size="$6"
+            checked={symbol}
+            onCheckedChange={setSymbol}
+          />
+          <LengthField length={length} setLength={setLength} />
+          <SubmitButton onPress={onPress} text="パスワードを生成する" />
+        </Stack>
+      </ScrollView>
     </SafeAreaView>
   );
 };
