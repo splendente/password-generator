@@ -3,7 +3,7 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "sb-rn-get-stories && expo start",
+    "start": "expo start",
     "start:no-cache": "sb-rn-get-stories && expo start -c",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
@@ -24,13 +24,14 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/native": "^7.0.0",
-    "@tamagui/config": "^1.115.0",
-    "@tamagui/lucide-icons": "^1.115.0",
-    "@tamagui/switch": "^1.115.4",
+    "@tamagui/config": "^1.125.35",
+    "@tamagui/lucide-icons": "^1.125.35",
+    "@tamagui/switch": "^1.125.35",
     "expo": "^52.0.44",
     "expo-clipboard": "~6.0.3",
     "expo-constants": "~16.0.2",
     "expo-font": "~12.0.9",
+    "expo-haptics": "~14.0.1",
     "expo-linking": "~6.3.1",
     "expo-modules-core": "^2.2.3",
     "expo-router": "~3.5.23",
@@ -47,7 +48,7 @@
     "react-native-screens": "4.10.0",
     "react-native-web": "~0.19.10",
     "tailwindcss": "^3.4.13",
-    "tamagui": "^1.115.0"
+    "tamagui": "^1.125.35"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
